@@ -1,0 +1,391 @@
+html,
+body,
+.weather-box {
+    height: 100%;
+    overflow: auto;
+}
+
+body{
+    font-size: .16rem
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-box {
+
+    background: url('../images/timg (2).jpg') no-repeat center center;
+    background-size: cover;
+}
+
+
+
+.weather-head {
+
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 50px;
+}
+
+
+
+
+.weather-body {
+    position: relative;
+    top: 50px;
+    /* height: calc(100% - 50px); */
+}
+
+.menu {
+
+    margin-top: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+.city {
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.menu>i {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    position: relative;
+
+}
+
+.menu-box {
+    float: left;
+    position: relative;
+    top: 14px;
+    left: -17px;
+    display: none;
+}
+
+.bubble {
+    display: block;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid transparent;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+
+}
+
+.menu-card {
+    background: #fff;
+    position: absolute;
+    width: 100px;
+    top: 30px;
+    left: -15px;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: .04rem;
+}
+
+.today {
+    padding: 40px 40px 40px 30px;
+}
+
+.temperature {
+    font-size: 100px;
+}
+
+.tdweather {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.humidity>i {
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: url(../images/水滴\ \(1\).png) no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+}
+
+.wind>i {
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: url(../images/旗子.png) no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+}
+
+.air {
+    margin-top: 10px;
+}
+
+.air>i {
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: url(../images/指数.png) no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: 5px;
+
+}
+
+.afterday li {
+    overflow: hidden;
+    border-top: 1px solid #647467;
+    padding: 5px;
+    line-height: 47px;
+}
+
+.afterday li>div {
+    float: left;
+    width: 33%;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+}
+
+.afterday li>div:last-child {
+    text-align: right;
+}
+
+.afterday i {
+    float: left;
+    font-size: 40px;
+    display: block;
+    width: 35%;
+}
+
+.weather-hours {
+    margin-bottom: 8px;
+}
+
+.weather-hours li>div:nth-child(3) {
+
+    height: 40px;
+    line-height: 40px;
+
+}
+
+.weather-hours i {
+    font-size: 40px;
+}
+
+
+.weather-hours>div {
+    overflow-x: auto;
+}
+
+.weather-hours ul {
+    width: 1800px;
+}
+
+.weather-hours li {
+    width: 75px;
+    float: left;
+    text-align: center;
+}
+
+.afterday-box {
+
+    height: calc(100% - 4.7rem);
+    /* overflow-y: auto; */
+
+
+}
+
+.afterday {
+    height: 320px;
+    /* overflow: hidden; */
+}
+
+.search {
+    width: calc(100% - 55px - 47px);
+    position: fixed;
+    left: 45px;
+    top: 9px;
+}
+
+.search input {
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    padding: 3px 15px;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid #fff;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    /* margin-left: 10px; */
+    /* margin-top: 5px; */
+    background: url(../images/jd-sprites.png) no-repeat -86px 3px;
+    background-size: 210px 210px;
+    /* float: right; */
+    position: absolute;
+    top: 4px;
+    right: 7px;
+}
+
+.afterday span {
+    display: block;
+    width: 65%;
+    float: left;
+    text-align: center;
+}
+
+.manage-box {
+    display: none;
+}
+
+.manage-nav {
+    height: 60px;
+    border-bottom: 1px solid #ECECEC;
+    overflow: hidden;
+}
+
+.manage-nav>div:not(.manage-city) {
+    float: left;
+    width: 28px;
+    /* height: 28px; */
+    margin: 16px;
+}
+
+.manage-nav>.back {
+    float: left;
+    cursor: pointer;
+}
+
+.manage-city {
+    float: left;
+    line-height: 60px;
+    font-size: 21px;
+}
+
+.manage-nav>div:last-child {
+    float: right;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.manage-content {}
+
+.save-citys {
+    height: 70px;
+    border-bottom: 1px solid #ECECEC;
+
+
+}
+
+.save-citys>div {
+    float: left;
+
+}
+
+
+.save-city {
+    margin-top: 11px;
+}
+
+
+.save-citys>div.show-city {
+    margin-top: 19px;
+}
+
+.save-wdImg {
+    width: 40px;
+    margin: 8px 10px;
+
+
+}
+
+.save-wdImg>i {
+    font-size: 36px;
+}
+
+
+
+
+.auto-img {
+    width: 100%;
+    display: block;
+
+}
+
+.show-city {
+    width: 60px;
+    height: 26px;
+    border-radius: 15px;
+    position: relative;
+    /* background: #DBDBDC; */
+    border: 1px solid #DBDBDC;
+    float: right !important;
+    margin-right: 15px;
+}
+
+.circle {
+    position: absolute;
+    top: 4px;
+    left: 38px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #168CEA;
+    transition: all .5s;
+
+}
+
+.circle-hide {
+    width: 10px;
+    height: 10px;
+    top: 7px;
+    left: 6px;
+    background: #eaeaea;
+}
+
+/* .show {
+    background: url(../images/定位.png) no-repeat center center;
+
+} */
+
+.del{
+    line-height: 40px;
+    margin-left: 15px;
+    background: #eaeaea;
+    height: 40px;
+    margin-top: 15px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
